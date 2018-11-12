@@ -19,7 +19,7 @@
 set -e
 
 # Required!
-DEVICE=oneplus6
+DEVICE=oneplus6t
 VENDOR=oneplus
 
 INITIAL_COPYRIGHT_YEAR=2018
@@ -41,7 +41,7 @@ fi
 setup_vendor "$DEVICE" "$VENDOR" "$CM_ROOT"
 
 # Copyright headers and guards
-write_headers "oneplus6"
+write_headers "oneplus6t"
 
 # The standard blobs
 write_makefiles "$MY_DIR"/proprietary-files.txt

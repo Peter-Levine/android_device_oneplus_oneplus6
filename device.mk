@@ -19,7 +19,7 @@
 # device-specific aspects (drivers) with a device-agnostic
 # product configuration (apps).
 #
-$(call inherit-product, vendor/oneplus/oneplus6/device-vendor.mk)
+$(call inherit-product, vendor/oneplus/oneplus6t/device-vendor.mk)
 $(call inherit-product-if-exists, vendor/gapps/arm64/arm64-vendor.mk)
 $(call inherit-product, vendor/omni/config/phone-xxhdpi-4096-dalvik-heap.mk)
 $(call inherit-product, vendor/omni/config/phone-xxhdpi-2048-hwui-memory.mk)
@@ -135,8 +135,8 @@ PRODUCT_COPY_FILES += \
 
 # Prebuilt
 PRODUCT_COPY_FILES += \
-    $(call find-copy-subdir-files,*,device/oneplus/oneplus6/prebuilt/system,system) \
-    $(call find-copy-subdir-files,*,device/oneplus/oneplus6/prebuilt/root,root)
+    $(call find-copy-subdir-files,*,device/oneplus/oneplus6t/prebuilt/system,system) \
+    $(call find-copy-subdir-files,*,device/oneplus/oneplus6t/prebuilt/root,root)
 
 
 PRODUCT_AAPT_CONFIG := xxhdpi
@@ -149,12 +149,12 @@ PRODUCT_PACKAGES += \
 
 # Keylayouts
 PRODUCT_COPY_FILES += \
-    device/oneplus/oneplus6/keylayout/fpc1020.kl:system/usr/keylayout/fpc1020.kl \
-    device/oneplus/oneplus6/keylayout/gf_input.kl:system/usr/keylayout/gf_input.kl
+    device/oneplus/oneplus6t/keylayout/fpc1020.kl:system/usr/keylayout/fpc1020.kl \
+    device/oneplus/oneplus6t/keylayout/gf_input.kl:system/usr/keylayout/gf_input.kl
 
 # Lights
 PRODUCT_PACKAGES += \
-    lights.oneplus6
+    lights.oneplus6t
 
 PRODUCT_PACKAGES += \
     android.hardware.light-V2.0-java \
@@ -191,7 +191,7 @@ PRODUCT_PACKAGES += \
 
 # power
 PRODUCT_PACKAGES += \
-    power.oneplus6
+    power.oneplus6t
 
 # ANT+
 PRODUCT_PACKAGES += \
@@ -258,7 +258,7 @@ PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_telephony.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/media_codecs_google_telephony.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_video.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/media_codecs_google_video.xml
 
-PRODUCT_PACKAGES += android.hardware.health@2.0-service.oneplus6
+PRODUCT_PACKAGES += android.hardware.health@2.0-service.oneplus6t
 DEVICE_FRAMEWORK_MANIFEST_FILE += \
     system/libhidl/vintfdata/manifest_healthd_exclude.xml
 
@@ -268,8 +268,8 @@ DEVICE_FRAMEWORK_MANIFEST_FILE += \
 # does not exist as they are mutually exclusive.  Once all target's android_filesystem_config.h
 # have been removed, TARGET_FS_CONFIG_GEN should be made unconditional.
 DEVICE_CONFIG_DIR := $(dir $(firstword $(subst ]],, $(word 2, $(subst [[, ,$(_node_import_context))))))
-ifeq ($(wildcard device/oneplus/oneplus6/android_filesystem_config.h),)
-  TARGET_FS_CONFIG_GEN := device/oneplus/oneplus6/config.fs
+ifeq ($(wildcard device/oneplus/oneplus6t/android_filesystem_config.h),)
+  TARGET_FS_CONFIG_GEN := device/oneplus/oneplus6t/config.fs
 else
   $(warning **********)
   $(warning TODO: Need to replace legacy $(DEVICE_CONFIG_DIR)android_filesystem_config.h with config.fs)

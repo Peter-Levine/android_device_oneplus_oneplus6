@@ -298,8 +298,8 @@ persist.qua.op=0
 #endif
 
 #omni
-ro.hardware.lights=oneplus6
-ro.hardware.power=oneplus6
+ro.hardware.lights=oneplus6t
+ro.hardware.power=oneplus6t
 ro.config.ringtone=omni_ringtone1.ogg
 ro.config.notification_sound=omni_notification1.ogg
 ro.config.alarm_alert=omni_alarm1.ogg

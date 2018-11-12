@@ -18,7 +18,7 @@
 # device-specific aspects (drivers) with a device-agnostic
 # product configuration (apps).
 #
-BOARD_PATH := device/oneplus/oneplus6
+BOARD_PATH := device/oneplus/oneplus6t
 
 PRODUCT_FULL_TREBLE := true
 BOARD_VNDK_VERSION := current
@@ -42,11 +42,12 @@ BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
 BOARD_USES_RECOVERY_AS_BOOT := true
 
 TARGET_NO_BOOTLOADER := true
-TARGET_OTA_ASSERT_DEVICE := OnePlus6
+TARGET_OTA_ASSERT_DEVICE := OnePlus6T
 TARGET_KERNEL_VERSION := 4.9
 TARGET_KERNEL_CLANG_COMPILE := false
 TARGET_BOOTLOADER_BOARD_NAME := sdm845
 #TARGET_PLATFORM_DEVICE_BASE := /devices/soc.0/
+TARGET_USES_UEFI := true
 
 # Platform
 TARGET_BOARD_PLATFORM := sdm845
@@ -87,7 +88,7 @@ TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
 BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
 #TARGET_KERNEL_APPEND_DTB := true
 TARGET_KERNEL_SOURCE := kernel/oneplus/sdm845
-TARGET_KERNEL_CONFIG := omni_oneplus6_defconfig
+TARGET_KERNEL_CONFIG := omni_oneplus6t_defconfig
 BOARD_KERNEL_SEPARATED_DTBO := true
 
 # partitions
